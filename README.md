@@ -19,7 +19,7 @@ This model was developed as part of Project 01 of the Machine Learning disciplin
 
 The model was developed by Pedro Costa Aragão as an individual project. The pipeline was built using PyTorch and involves the following steps: exploratory analysis, preprocessing, implementation of the logistic regression model, training, evaluation, and documentation of the results.
 
-The goal is to predict the chance of a candidate being admitted to an MBA based on variables such as GRE score, TOEFL, college grade, research experience, among others.
+The goal is to predict the chance of a candidate being admitted to an MBA based on variables such as GPA score, GMAT, Major, among others.
 
 The full code, including the mba_admission_2025.ipynb notebook, is available in this repository.
 
@@ -29,7 +29,8 @@ This model was created exclusively for educational purposes, with the aim of app
 
 # Training Data
 
-#%% md
+I used the MBA Admission dataset, Class 2025, which is available for download directly from Kaggle. The exploratory data analysis (EDA) for this dataset is documented in this notebook.
+
 # About Dataset
 
 ## Data Source
@@ -50,7 +51,7 @@ Synthetic data generated from the Wharton Class of 2025's statistics.
 - **admission**: Admission status (Admit, Waitlist, Null: Deny)
 
 
-The target variable was converted to a binary variable (admitted: 1 if chance of admission ≥ 0.75, 0 otherwise), transforming the problem into a classification task.
+The target variable was converted to a binary variable, transforming the problem into a classification task.
 
 The dataset was divided as follows:
 
@@ -78,7 +79,7 @@ This model is a simplification of a real selection process. Many other factors (
 
 # Caveats and Recommendations
 
-The model uses an arbitrary binary split for the chance of admission (threshold of 0.75).
+The model uses an arbitrary binary split for the chance of admission.
 
 No advanced class balancing techniques were performed, although the data is reasonably balanced.
 
